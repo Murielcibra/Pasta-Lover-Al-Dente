@@ -1,0 +1,290 @@
+@import url("https://github.com/googlefonts/OswaldFont.git");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+p {
+  font-weight: 300;
+  color: #111;
+}
+
+.banner {
+  padding-top: 400px;
+  padding-bottom: 300px;
+  position: relative;
+  width: 100%;
+  min-width: 200vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/926/original/pasta-tomaty-muka-goluboi-fon-chesnok-bazilik-perets.jpg?1638267586");
+  background-size: cover;
+}
+.banner .content {
+  max-width: 900px;
+  text-align: center;
+}
+.banner .content h1 {
+  font-family: "Pacific-Regular";
+  font-size: 100px;
+  text-shadow: 2px 2px 5px#791D06;
+  color: #ffff;
+}
+.banner .content h2 {
+  font-family: "Crunchy Pasta";
+  font-size: 40px;
+  font-weight: 200;
+  text-shadow: 0px 2px 4px black;
+  color: #d0d562;
+}
+.banner .content p {
+  font-size: 24px;
+  font-weight: 900;
+  color: #ffff;
+}
+
+.button {
+  font-family: "Bahnschrift SemiBold";
+  font-size: 16px;
+  color: #fff;
+  background-color: #ca664d;
+  display: inline-block;
+  padding: 10px 30px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: all 200ms ease;
+}
+.button:hover {
+  letter-spacing: 10px;
+  color: #ca664d;
+  background: white;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 10000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 200ms;
+}
+header.sticky {
+  background: #fff;
+  padding: 10px 100px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+header .logo {
+  color: #fff;
+  font-family: "Pacific-Regular";
+  font-weight: 700;
+  text-decoration: underline dotted white;
+  letter-spacing: 2px;
+
+  font-size: 48px;
+  text-shadow: 2px 2px 5px#791D06;
+}
+header.sticky .logo {
+  color: #791d06;
+  text-shadow: 1px 1px 1px#791D06;
+}
+header .navigation {
+  position: relative;
+  display: flex;
+}
+header .navigation li {
+  list-style: none;
+  margin-left: 30px;
+}
+header .navigation li a {
+  font-size: 20px;
+  text-shadow: 1px 1px 1px#791D06;
+  text-decoration: none;
+  font-style: "BebasNeue-Regular";
+  color: #fff;
+  font-weight: 700;
+}
+
+header.sticky .navigation li a {
+  color: #791d06;
+}
+header.sticky .navigation li a:hover {
+  color: #d0d562;
+}
+section {
+  padding: 100px;
+}
+.row {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.row .cooking101 {
+  position: relative;
+  width: 1000px;
+}
+.titleText {
+  font-size: 26px;
+  letter-spacing: 2px;
+  font-weight: 200;
+  line-height: 80px;
+  font-family: "Crunchy Pasta";
+}
+
+.row .cooking101 span {
+  font-size: 24px;
+  letter-spacing: 2px;
+  font-weight: 200;
+  font-family: "Crunchy Pasta";
+}
+.row .cooking101 .howMany {
+  font-size: 36px;
+  color: #ca664d;
+  font-weight: bolder;
+  font-family: "Bahnschrift SemiBold";
+  text-shadow: 1px 2px 1px black;
+}
+
+.restText {
+  color: #ca664d;
+  font-size: 24px;
+  font-family: "Pacific-Regular";
+  font-weight: 600;
+  text-align: center;
+  border-radius: 4px;
+  display: block;
+  background-color: #ca664d;
+  border: 4px solid #ca664d;
+  color: #fff;
+  text-shadow: 1px 0px 2px#791D06;
+  margin: 20px auto;
+  line-height: 22px;
+  padding: 16px 24px;
+}
+
+.row .cooking101 .imgBx {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+}
+.row .cooking101 .imgBx img {
+  position: absolute;
+  border-radius: 30px;
+  margin-left: 40px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.popular {
+  background: url("https://images.pexels.com/photos/349610/pexels-photo-349610.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+  background-size: cover;
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.popular .content {
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.popular .content .box {
+  width: 400px;
+  margin: 40px;
+  background: #fff;
+  border: 20px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.6);
+}
+.popular .content .box .imgBx {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+.popular .content .box .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.popular .text h3 {
+  margin-top: 10px;
+}
+.recetas-links {
+  text-decoration: underline;
+  color: #111;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+}
+button {
+  font-family: "Bahnschrift SemiBold";
+  font-size: 16px;
+  color: #fff;
+  background-color: #ca664d;
+  display: inline-block;
+  padding: 10px 30px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: all 200ms ease;
+}
+
+button:hover {
+  letter-spacing: 10px;
+  color: #ca664d;
+  background: white;
+}
+.sociaLink {
+  text-align: center;
+  padding-top: 40px;
+}
+.sociaLink ion-icon {
+  width: 80px;
+  height: 80px;
+}
+.sociaLink .social-icons {
+  color: red;
+  margin: 0 10px;
+  transition: all 200ms ease;
+}
+.sociaLink .social-instagram {
+  color: #ec255a;
+}
+
+.popular h4 {
+  font-size: 20px;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  font-family: "Bahnschrift SemiBold";
+  text-shadow: 2px 1px 1px #fff;
+}
+.popular footer {
+  font-size: 16px;
+  text-align: right;
+  color: #444444;
+  font-weight: bold;
+  font-family: "Bahnschrift SemiBold";
+}

@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>👨🏻‍🍳ALdenTAY👩🏻‍🍳</title>
+
+    <style>
+      @import url("https://github.com/googlefonts/OswaldFont.git");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+      p {
+        font-weight: 300;
+        color: #111;
+      }
+
+      .banner {
+        padding-top: 400px;
+        padding-bottom: 300px;
+        position: relative;
+        width: 100%;
+        min-width: 200vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/926/original/pasta-tomaty-muka-goluboi-fon-chesnok-bazilik-perets.jpg?1638267586");
+        background-size: cover;
+      }
+      .banner .content {
+        max-width: 900px;
+        text-align: center;
+      }
+      .banner .content h1 {
+        font-family: "Pacific-Regular";
+        font-size: 100px;
+        text-shadow: 2px 2px 5px#791D06;
+        color: #ffff;
+      }
+      .banner .content h2 {
+        font-family: "Crunchy Pasta";
+        font-size: 40px;
+        font-weight: 200;
+        text-shadow: 0px 2px 4px black;
+        color: #d0d562;
+      }
+      .banner .content p {
+        font-size: 24px;
+        font-weight: 900;
+        color: #ffff;
+      }
+
+      .button {
+        font-family: "Bahnschrift SemiBold";
+        font-size: 16px;
+        color: #fff;
+        background-color: #ca664d;
+        display: inline-block;
+        padding: 10px 30px;
+        margin-top: 20px;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 2px;
+        transition: all 200ms ease;
+      }
+      .button:hover {
+        letter-spacing: 10px;
+        color: #ca664d;
+        background: white;
+      }
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 40px 100px;
+        z-index: 10000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 200ms;
+      }
+      header.sticky {
+        background: #fff;
+        padding: 10px 100px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+      }
+      header .logo {
+        color: #fff;
+        font-family: "Pacific-Regular";
+        font-weight: 700;
+        text-decoration: underline dotted white;
+        letter-spacing: 2px;
+
+        font-size: 48px;
+        text-shadow: 2px 2px 5px#791D06;
+      }
+      header.sticky .logo {
+        color: #791d06;
+        text-shadow: 1px 1px 1px#791D06;
+      }
+      header .navigation {
+        position: relative;
+        display: flex;
+      }
+      header .navigation li {
+        list-style: none;
+        margin-left: 30px;
+      }
+      header .navigation li a {
+        font-size: 20px;
+        text-shadow: 1px 1px 1px#791D06;
+        text-decoration: none;
+        font-style: "BebasNeue-Regular";
+        color: #fff;
+        font-weight: 700;
+      }
+
+      header.sticky .navigation li a {
+        color: #791d06;
+      }
+      header.sticky .navigation li a:hover {
+        color: #d0d562;
+      }
+      section {
+        padding: 100px;
+      }
+      .row {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .row .cooking101 {
+        position: relative;
+        width: 1000px;
+      }
+      .titleText {
+        font-size: 26px;
+        letter-spacing: 2px;
+        font-weight: 200;
+        line-height: 80px;
+        font-family: "Crunchy Pasta";
+      }
+
+      .row .cooking101 span {
+        font-size: 24px;
+        letter-spacing: 2px;
+        font-weight: 200;
+        font-family: "Crunchy Pasta";
+      }
+      .row .cooking101 .howMany {
+        font-size: 36px;
+        color: #ca664d;
+        font-weight: bolder;
+        font-family: "Bahnschrift SemiBold";
+        text-shadow: 1px 2px 1px black;
+      }
+
+      .restText {
+        color: #ca664d;
+        font-size: 24px;
+        font-family: "Pacific-Regular";
+        font-weight: 600;
+        text-align: center;
+        border-radius: 4px;
+        display: block;
+        background-color: #ca664d;
+        border: 4px solid #ca664d;
+        color: #fff;
+        text-shadow: 1px 0px 2px#791D06;
+        margin: 20px auto;
+        line-height: 22px;
+        padding: 16px 24px;
+      }
+
+      .row .cooking101 .imgBx {
+        position: relative;
+        width: 100%;
+        min-height: 400px;
+      }
+      .row .cooking101 .imgBx img {
+        position: absolute;
+        border-radius: 30px;
+        margin-left: 40px;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .popular {
+        background: url("https://images.pexels.com/photos/349610/pexels-photo-349610.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+        background-size: cover;
+        padding-bottom: 40px;
+        padding-top: 40px;
+      }
+      .title {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .popular .content {
+        display: flex;
+        justify-content: center;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        margin-top: 10px;
+      }
+
+      .popular .content .box {
+        width: 400px;
+        margin: 40px;
+        background: #fff;
+        border: 20px solid #fff;
+        border-radius: 10px;
+        box-shadow: 0 5px 35px rgba(0, 0, 0, 0.6);
+      }
+      .popular .content .box .imgBx {
+        position: relative;
+        width: 100%;
+        height: 200px;
+      }
+      .popular .content .box .imgBx img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .popular .text h3 {
+        margin-top: 10px;
+      }
+      .recetas-links {
+        text-decoration: underline;
+        color: #111;
+        font-weight: bold;
+        font-family: "Times New Roman", Times, serif;
+      }
+      button {
+        font-family: "Bahnschrift SemiBold";
+        font-size: 16px;
+        color: #fff;
+        background-color: #ca664d;
+        display: inline-block;
+        padding: 10px 30px;
+        margin-top: 20px;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 2px;
+        transition: all 200ms ease;
+      }
+
+      button:hover {
+        letter-spacing: 10px;
+        color: #ca664d;
+        background: white;
+      }
+      .sociaLink {
+        text-align: center;
+        padding-top: 40px;
+      }
+      .sociaLink ion-icon {
+        width: 80px;
+        height: 80px;
+      }
+      .sociaLink .social-icons {
+        color: red;
+        margin: 0 10px;
+        transition: all 200ms ease;
+      }
+      .sociaLink .social-instagram {
+        color: #ec255a;
+      }
+
+      .popular h4 {
+        font-size: 20px;
+        text-align: center;
+        color: black;
+        font-weight: bold;
+        font-family: "Bahnschrift SemiBold";
+        text-shadow: 2px 1px 1px #fff;
+      }
+      .popular footer {
+        font-size: 16px;
+        text-align: right;
+        color: #444444;
+        font-weight: bold;
+        font-family: "Bahnschrift SemiBold";
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo"> Al Dente </a>
+      <ul class="navigation">
+        <li><a href="#banner">Home</a></li>
+        <li><a href="#hW">How it Works</a></li>
+        <li><a href="#popular"> Most Popular Recipes</a></li>
+      </ul>
+    </header>
+    <section class="banner" id="banner">
+      <div class="content">
+        <h1>Pasta Will Never Break Your Heart</h1>
+        <h2>The Freshest, Artisan Pasta Recipes</h2>
+        <p>
+          Simple and quick to make, pasta is one of the most popular and
+          essential store cupboard staples.
+        </p>
+        <a
+          href="https://tasty.co/article/jesseszewczyk/basic-pasta-cooking-tips"
+          target="_blank"
+          class="button"
+          >Pastas Cooking Tips🍝</a
+        >
+        <h4></h4>
+      </div>
+    </section>
+    <section class="hW" id="hW">
+      <div class="row">
+        <div class="cooking101">
+          <h2 class="titleText">How it Works</h2>
+          <p>
+            No matter the season, a perfect plate of pasta is one of life's
+            simple pleasures. From the truffle-topped plates of Piemonte, to the
+            meat-heavy ragù dishes of Emilia-Romagna and the sauced-up pasta of
+            Roma, every one of Italy's 20 regions boasts traditional dishes to
+            call their own. <br /><br />Explore some of Italy's finest, flavours
+            in this week recipes.
+          </p>
+
+          <h3 class="restText"><em>Recreate the Restaurant at Home</em></h3>
+          <p>
+            Get inspired with <span class="howMany">3</span>
+            <span>Delicious Recipes Every Day</span> that will make you jump
+            right into your kitchen.
+          </p>
+        </div>
+        <div class="cooking101">
+          <div class="imgBx">
+            <img
+              src="https://images.pexels.com/photos/6287520/pexels-photo-6287520.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+              alt="Pasta Restaurant"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="popular" id="popular">
+      <div class="title">
+        <h2 class="titleText">Most Popular Recipes</h2>
+        <p>
+          Get inspired with delicious Recipes🍝 every day that will make you
+          jump right into your kitchen.
+        </p>
+      </div>
+
+      <div class="content">
+        <div class="box">
+          <div class="imgBx">
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/077/632/original/sausageragupasta1.JPG?1681761071"
+              alt="pastaChristmas"
+            />
+          </div>
+          <div class="text">
+            <h3>
+              <a
+                href="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/077/632/original/sausageragupasta1.JPG?1681761071"
+                target="_blank"
+                class="recetas-links"
+                >Vesuvio al Ragù di Salsiccia</a
+              >
+            </h3>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="imgBx">
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/077/633/original/recipe-image-legacy-id-1001491_11-2e0fa5c.jpg?1681761082"
+              alt="carbonaraPasta"
+            />
+          </div>
+          <div class="text">
+            <h3>
+              <a
+                href="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/077/633/original/recipe-image-legacy-id-1001491_11-2e0fa5c.jpg?1681761082"
+                target="_blank"
+                class="recetas-links"
+              >
+                Pasta alla Carbonara
+              </a>
+            </h3>
+          </div>
+        </div>
+        <div class="box">
+          <div class="imgBx">
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/077/634/original/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__2021__02__20210208-Spaghetti-al-Tonno-sasha-marx-10-a0d3b3bd2892470883baa1fe0d3e9b46.jpg?1681761088"
+              alt="pastaAlTonno"
+            />
+          </div>
+          <div class="text">
+            <h3>
+              <a
+                href="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/077/634/original/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__2021__02__20210208-Spaghetti-al-Tonno-sasha-marx-10-a0d3b3bd2892470883baa1fe0d3e9b46.jpg?1681761088"
+                target="_blank"
+                class="recetas-links"
+                >Pasta al Tonno</a
+              >
+            </h3>
+          </div>
+        </div>
+        <div class="box">
+          <div class="imgBx">
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/077/635/original/Truffle-fettuccine_650x433_wm.jpg?1681761094"
+              alt="pastaTartufo"
+            />
+          </div>
+          <div class="text">
+            <h3>
+              <a
+                href="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/077/635/original/Truffle-fettuccine_650x433_wm.jpg?1681761094"
+                target="_blank"
+                class="recetas-links"
+                >Tagliatelle al Tartufo</a
+              >
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div class="title">
+        <button>START SENDING ME RECIPES</button>
+      </div>
+
+      <div class="sociaLink" id="contact">
+        <a
+          href="https://www.youtube.com/watch?v=wGcRbQ5gaeI"
+          target="_blank"
+          class="social-icons"
+          ><ion-icon name="logo-youtube"></ion-icon
+        ></a>
+        <a
+          href="https://www.instagram.com/murielcibra/"
+          target="_blank"
+          class="social-instagram"
+        >
+          <ion-icon name="logo-instagram"></ion-icon
+        ></a>
+      </div>
+      <h4>Follow us on social media</h4>
+      <footer>Coded by Muriel Cishek</footer>
+    </section>
+    <script type="text/javascript">
+      window.addEventListener("scroll", function () {
+        const header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+      });
+
+      function pastaLover() {
+        let age = prompt(
+          "How much do you love pasta on a scale from 1🙁to 10😍?"
+        );
+        return age >= 8;
+      }
+
+      function apply() {
+        let firstName = prompt("What is your first name?");
+        let email = prompt("What is your email addres?");
+
+        if (pastaLover()) {
+          alert(`Damn ${firstName}!You are a Pasta-Team-Lover😍!`);
+        } else {
+          alert(`${firstName}, you are breaking my heart😔.`);
+        }
+      }
+
+      let applyButton = document.querySelector("button");
+      applyButton.addEventListener("click", apply);
+    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
